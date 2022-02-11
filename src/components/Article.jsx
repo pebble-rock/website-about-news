@@ -14,18 +14,18 @@ const Article = () => {
     });
   }, [article_id]);
 
-  useEffect(() => {
-    getComments(article_id).then((res) => {
-      setComments(res);
-    });
-  }, [article_id]);
+  // useEffect(() => {
+  //   getComments(article_id).then((res) => {
+  //     setComments(res);
+  //   });
+  // }, [article_id]);
 
   return (
     <div>
       <h2>{article.title}</h2>
       <h3> written by {article.author} </h3>
       <p>{article.body}</p>
-      {/* <li>{comments}</li> */}
+      <p>{article.comments}</p>
     </div>
   );
 };
